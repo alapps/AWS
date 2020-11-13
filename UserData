@@ -1,0 +1,7 @@
+#!/bin/bash
+# install httpd(Linux 2 version)
+yum update -y. #update machine
+yum install -y httpd.x86_64.  #install http
+systemctl start httpd.service.  #start httpd
+systemctl enable httpd.service. #enable 
+echo “hello World from $(hostname -f)”>/var/www/html/index.html   #start with that at homepage
